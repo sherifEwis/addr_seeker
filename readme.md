@@ -10,7 +10,7 @@ searchers a website or a string for a us postal address and parses it.
 
 
 
-pip install polar_analyzer`
+`pip install addr_seeker`
 
 
 
@@ -18,14 +18,8 @@ pip install polar_analyzer`
 
 
  
-
-from polar_analyzer import PolarAnalyzer
-pa = PolarAnalyzer()
-pa.read_file("book.txt")
-semValues = pa.polar_values(positive_seeds = ["good", "order", "safe", "life"], negative_seeds = ["bad", "chaos", "danger", "death"])
-
-
-please make sure that positive_seeds and negative_seeds are semantically opposites.
+`from addr_seeker import AddrSeeker
+seeker = AddrSeeker(maxDepth= 2 ) #max tree depth to look, where the initial url is the root. 1 means look only `
 
 
 ## Contributing
