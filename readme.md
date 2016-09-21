@@ -18,11 +18,52 @@ searchers a website or a string for a us postal address and parses it.
 
 
  
-`from addr_seeker import AddrSeeker
-seeker = AddrSeeker(maxDepth= 2 ) #max tree depth to look, where the initial url is the root. 1 means look only `
+
+### searching a string for an address
+
+```python
+from addr_seeker import AddrSeeker
+s = SomeText
+result = AddrSeeker.scanText(s)
+print(result)
+```
+#### output:
+(STREET, POBOX, CITY, STATE, ZIPCODE)
+### searching a website for a postal address
+```python
+from addr_seeker import AddrSeeker
+seeker = AddrSeeker(maxDepth= 2 ) 
+#max tree depth to look, where the initial url is the root. 
+	#0 means look only at the url page itself. 1 means look at the url and in all links in that page and so on
+seeker.setUrl("www.apple.com")
+result = seeker.findMailingAddr() 
+print(result)
+```
+#### output:
+`(3, ('1 infinite loop', None, 'cupertino', 'ca', '95014'), 1)`
+
+result is in the following format:
+	(STATUSCODE, (STREET, POBOX, CITY, STATE, ZIPCODE), DEPTH)
+
+
+STATUSCODE: 
+   0: page does not exist
+   1: branches do not exist
+   2: addr does not exist in neither the page nor it`s branches
+   3: addr found in tree
+
+DEPTH is the depth of where the address was found
+
+
+
+
+
+
 
 
 ## Contributing
+
+
 
 
 1. Fork it!

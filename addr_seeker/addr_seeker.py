@@ -74,7 +74,7 @@ def getHTML(URL):
         Handler.close()
         return d
     except Exception as e:
-        print(str(e))
+        #print(str(e))
         return None
 
 
