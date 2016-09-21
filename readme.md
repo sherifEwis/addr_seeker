@@ -46,11 +46,11 @@ result is in the following format:
 	(STATUSCODE, (STREET, POBOX, CITY, STATE, ZIPCODE), DEPTH)
 
 
-STATUSCODE: 
-   0: page does not exist
-   1: branches do not exist
-   2: addr does not exist in neither the page nor it`s branches
-   3: addr found in tree
+STATUSCODE:
+0: page does not exist
+1: branches do not exist
+2: addr does not exist in neither the page nor it`s branches
+3: addr found in tree
 
 DEPTH is the depth of where the address was found
 
