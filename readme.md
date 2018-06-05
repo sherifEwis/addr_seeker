@@ -43,7 +43,8 @@ print(result)
 `(3, ('1 infinite loop', None, 'cupertino', 'ca', '95014'), 1)`
 
 result is in the following format:
-	(STATUSCODE, (STREET, POBOX, CITY, STATE, ZIPCODE), DEPTH)
+	(STATUSCODE, (STREET, POBOX, CITY, STATE, ZIPCODE), DEPTH)
+
 
 
 STATUSCODE:
@@ -55,7 +56,8 @@ STATUSCODE:
 2: addr does not exist in neither the page nor it`s branches
 
 3: addr found in tree
-
+
+
 DEPTH is the depth of where the address was found
 
 
@@ -97,5 +99,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 ## Contact
-sheri_eweis@hotmail.com.
+
+sherifeweis@gmail.com.
+
 
